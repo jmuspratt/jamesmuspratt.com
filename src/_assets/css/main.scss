@@ -1,9 +1,10 @@
+@import 'partials/vars';
+
 body {
-    /* font-family: monospace; */
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #eee;
+    font-family: $f-sans;
+    background-color: $c-blue;
     line-height: 1.3;
-    color: #777;
+    color: $c-white-light;
     max-width: 40em;
     padding: 1em;
 }
@@ -31,14 +32,15 @@ li {
 }
 
 h1 {
-    color: #000;
+    color:$c-white;
     font-weight: normal; 
 }
 
-
 a {
-    color: #000;
-    border-bottom: 1px solid #000;
+    color:$c-white;
+    border-bottom: 1px solid $c-white-light-2;
     text-decoration: none;
     display: inline-block;
 }
+
+
