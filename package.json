@@ -9,7 +9,7 @@
     "dev:parcel": "parcel watch src/_assets/images/* src/_assets/css/main.scss src/_assets/js/index.js --out-dir _site/assets",
     "build": "run-s prod:*",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy --output=./build",
-    "prod:parcel": "parcel build src/_assets/images/*  src/_assets/css/main.scss src/_assets/js/index.js --out-dir _site/assets"
+    "prod:parcel": "parcel build src/_assets/images/*  src/_assets/css/main.scss src/_assets/js/index.js --out-dir build/assets"
   },
   "keywords": [],
   "author": "",

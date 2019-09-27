@@ -1,4 +1,5 @@
+.cache
 _site/
+build/
 node_modules/
 package-lock.json
-.cache
