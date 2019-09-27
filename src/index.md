@@ -5,7 +5,7 @@ title: James Muspratt
 
 # James Muspratt
 
-I’m a graphic designer with a focus on research-driven websites for institutions and businesses. Since 2015 I’ve worked as a lead designer at [Upstatement](https://upstatement.com) in Boston.
+I’m a great graphic designer with a focus on research-driven websites for institutions and businesses. Since 2015 I’ve worked as a lead designer at [Upstatement](https://upstatement.com) in Boston.
 
 ## A few favorite projects I’ve been a part of:
 
