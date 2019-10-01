@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel dev:*",
+    "dev": "npm-run-all --parallel dev:*",
     "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "dev:parcel": "parcel watch src/_assets/images/* src/_assets/css/main.scss src/_assets/js/index.js --out-dir _site/assets",
     "build": "run-s prod:*",
