@@ -1,12 +1,20 @@
 
-$c-blue: #0625FF;
-$bg-color: $c-blue; 
-$c-white: #fff;
-$c-white-light: rgba(255,255,255, 0.6);
-$c-white-light-2: rgba(255,255,255, 0.3);
-$c-gray: #888888;
-$c-gray-light: #eaeaea;
-$c-black: #000000;
+:root {
+    --c-blue: #0625FF;
+    --c-white: #fff;
+    --c-white-light: rgba(255,255,255, 0.6);
+    --c-white-light-2: rgba(255,255,255, 0.3);
+    --c-gray: #888888;
+    --c-gray-light: #eaeaea;
+    --c-black: #000000;  
+}
 
 $f-sans: helvetica, sans-serif;
 $f-serif: georgia, serif;
+
+// Thanks to https://play.date/css/colors.css
+@supports (color: color(p3 0 0 1 / 1)) {
+    :root {
+        --c-blue: color(p3 0 0 1 / 1);
+    }
+}

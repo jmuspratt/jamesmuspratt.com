@@ -1,8 +1,11 @@
 
+body, body * {
+    text-rendering: optimizeLegibility;
+}
 
 body {
-    background-color: $c-blue;
-    color: $c-black;
+    background-color: var(--c-blue);
+    color: var(--c-black);
     padding: 0;
     margin: 0;
     position: relative;
@@ -28,20 +31,19 @@ ul {
 
 
 a, a:link, a:visited {
-    color: $c-black;
-    color: $c-white;
+    color: var(--c-white);
     text-decoration: none;
     display: inline-block;
     text-indent: 0;
 
     &:hover {
-        color: $c-black;
+        color: var(--c-black);
     }
 }
 
 
 .layer {
-    background-color: $c-blue;
+    background-color: var(--c-blue);
     position: relative;
     padding: 1em;
     line-height: 1.3;

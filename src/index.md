@@ -3,7 +3,7 @@ layout: layout.njk
 title: James Muspratt
 ---
 
-I’m a graphic designer with a focus on research-driven websites and data visualization. Since 2015 I’ve worked as a lead designer at [Upstatement](https://upstatement.com) in Boston. Here are a few favorite projects I’ve been a part of:
+I’m a graphic designer with a focus on research-driven websites and data visualization. Since 2015 I’ve worked as a lead designer at [Upstatement](https://upstatement.com) in Boston. Here are a few favorite projects I’ve helped design and build:
 
 - [The Harvard Gazette](https://news.harvard.edu/gazette)  
 A new design for Harvard’s official voice.
