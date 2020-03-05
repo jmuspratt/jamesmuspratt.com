@@ -11,7 +11,7 @@ const hoverClipPath = {
         .addClass('layer--2')
         .insertAfter('.layer--1');
 
-        const $layer2 = $('.layer--2'); 
+        const $layer2 = $('.layer--2');
         const $content = $('.content');
 
         $content.mousemove( (event)=>{
@@ -20,12 +20,14 @@ const hoverClipPath = {
     },
 
     moveClipPath(x, y, $layer) {
-        // const clipPath = `polygon(0px 100vh, ${x*1.3}px 0px, 0px 0px)`;
+        // Polygon
+        const clipPath = `polygon(${y*1.3}px 100vh, ${x*1.3}px 0, 0 ${y*1.3}px)`;
 
-        const xVal = x / 10 
-        const yVal = y / 10; 
+        // Ellipse option:
+        // const xVal = x / 10
+        // const yVal = y / 10;
+        // const clipPath = `ellipse(${yVal}% ${xVal}% at 50% 50%)`;
 
-        const clipPath = `ellipse(${yVal}% ${xVal}% at 50% 50%)`;
         $layer.css({
             "clip-path": clipPath,
             "-webkit-clip-path": clipPath
