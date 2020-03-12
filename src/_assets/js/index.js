@@ -11,15 +11,15 @@ const hoverClipPath = {
         .addClass('layer--2')
         .insertAfter('.layer--1');
 
-        const $layer2 = $('.layer--2');
-        const $content = $('.content');
+        this.layer2 = document.querySelector('.layer--2');
+        const content = document.querySelector('.content');
 
-        $content.mousemove( (event)=>{
-            this.moveClipPath(event.pageX, event.pageY, $layer2);
+        content.addEventListener('onmousemove', (event)=>{
+            this.moveClipPath(event.pageX, event.pageY);
         });
     },
 
-    moveClipPath(x, y, $layer) {
+    moveClipPath(x, y) {
         // Polygon
         const clipPath = `polygon(${y*1.3}px 100vh, ${x*1.3}px 0, 0 ${y*1.3}px)`;
 
@@ -28,10 +28,7 @@ const hoverClipPath = {
         // const yVal = y / 10;
         // const clipPath = `ellipse(${yVal}% ${xVal}% at 50% 50%)`;
 
-        $layer.css({
-            "clip-path": clipPath,
-            "-webkit-clip-path": clipPath
-        });
+        this.layer2.setAttribute('style', `clip-path: ${clipPath}; -webkit-clip-path: ${clipPath}`);
     },
 
 };
