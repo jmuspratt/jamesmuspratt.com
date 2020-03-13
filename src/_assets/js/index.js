@@ -2,41 +2,77 @@ import $ from 'jQuery';
 window.$ = window.jQuery = $
 
 
-const hoverClipPath = {
+const Triangle = {
     init() {
 
+        this.setup();
+        this.bindMouseMove();
+
+
+    },
+
+    setup() {
         $('.layer--1')
         .clone()
         .removeClass('layer--1')
         .addClass('layer--2')
         .insertAfter('.layer--1');
 
-        const $layer2 = $('.layer--2');
-        const $content = $('.content');
+        this.permissionGiven = false;
+        this.$layer2 = $('.layer--2');
+        this.$content = $('.content');
 
-        $content.mousemove( (event)=>{
-            this.moveClipPath(event.pageX, event.pageY, $layer2);
+        this.$content.click(()=>{
+            this.askPermission();
         });
     },
 
-    moveClipPath(x, y, $layer) {
-        // Polygon
-        const clipPath = `polygon(${y*1.3}px 100vh, ${x*1.3}px 0, 0 ${y*1.3}px)`;
+    askPermission() {
+        if (window.DeviceOrientationEvent) {
+            window.DeviceMotionEvent
+                .requestPermission()
+                .then(response => {
+                if (response === 'granted') {
+                    this.bindDeviceTilt();
+                    this.permissionGiven = true;
+                } else {
+                    this.permissionGiven = false;
+                }
+            });
+        }
+    },
 
-        // Ellipse option:
-        // const xVal = x / 10
-        // const yVal = y / 10;
-        // const clipPath = `ellipse(${yVal}% ${xVal}% at 50% 50%)`;
+    bindDeviceTilt() {
+        window.addEventListener('deviceorientation', (event) => {
+            const a = Math.abs(event.alpha) * 1.3;
+            const b = Math.abs(event.gamma) * 10;
+            const c = Math.abs(event.beta) * 5;
 
-        $layer.css({
+            this.moveClipPath(a, b, c);
+        });
+    },
+
+    bindMouseMove() {
+        this.$content.mousemove( (event)=>{
+            const a = event.pageY * 1.3;
+            const b = event.pageX * 1.3;
+            const c = event.pageY * 1.3;
+            this.moveClipPath(a, b, c);
+        });
+    },
+
+    moveClipPath(a, b, c, shiftX) {
+      // $('.debug').html(`a: ${a}<br />b: ${b}<br />c: ${c}, shiftX: ${shiftX}`);
+        const clipPath = `polygon(${a}px 100vh, ${b}px 0, 0 ${c}px)`;
+        this.$layer2.css({
             "clip-path": clipPath,
-            "-webkit-clip-path": clipPath
+            "-webkit-clip-path": clipPath,
         });
     },
 
 };
 
-$(document).ready(() => hoverClipPath.init());
+$(document).ready(() => Triangle.init());
 
 
 

@@ -84,3 +84,14 @@ a, a:link, a:visited {
   position: relative;
   padding-bottom: 100px;
 }
+
+.debug {
+  text-indent: 0;
+  font: bold 10px /1 arial;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: gray;
+  pointer-events: none;
+}
