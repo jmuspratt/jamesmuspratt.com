@@ -20,6 +20,10 @@ h1, h2, p, ul, li {
   text-indent: 2em;
 }
 
+p:first-child {
+  text-indent: 0;
+}
+
 p.last {
   margin-top: 1em;
   text-indent: 0;
