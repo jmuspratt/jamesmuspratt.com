@@ -1,6 +1,4 @@
 import $ from 'jQuery';
-window.$ = window.jQuery = $
-
 
 const Triangle = {
     init() {
@@ -65,14 +63,11 @@ const Triangle = {
       // $('.debug').html(`a: ${a}<br />b: ${b}<br />c: ${c}, shiftX: ${shiftX}`);
         const clipPath = `polygon(${a}px 100vh, ${b}px 0, 0 ${c}px)`;
         this.$layer2.css({
-            "clip-path": clipPath,
-            "-webkit-clip-path": clipPath,
+            "clipPath": clipPath,
+            "webkitClipPath": clipPath,
         });
     },
 
 };
 
 $(document).ready(() => Triangle.init());
-
-
-

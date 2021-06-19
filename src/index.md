@@ -15,6 +15,6 @@ And a few personal projects:
 
 - [Memory](https://memory.jamesmuspratt.com/) ↝ The classic card-matching game, built as a progressive web app for tablets. In progress.
 
-- [Money and Jobs](https://money.jamesmuspratt.com/) ↝ Explore 2016 campaign donations by occupation.
+- [Flat File](http://github.com/jmuspratt/flat-file) ↝ Host your own photo galleries using just files and folders.
 
 <p class="last">James Muspratt</br />Boston, Massachusetts</p>
