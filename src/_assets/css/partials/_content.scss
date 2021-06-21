@@ -1,5 +1,5 @@
-
-body, body * {
+body,
+body * {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -12,9 +12,12 @@ body {
   position: relative;
 }
 
-
-h1, h2, p, ul, li {
-  @include fluid-type(400px, 1200px, 18px, 35px);
+h1,
+h2,
+p,
+ul,
+li {
+  font-size: clamp(18px, 2vw, 35px);
   font-weight: normal;
   margin-bottom: 0;
   text-indent: 2em;
@@ -29,22 +32,20 @@ p.last {
   text-indent: 0;
 }
 
-
 ul {
   list-style: none;
 }
 
-
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   text-decoration: none;
   display: inline-block;
   text-indent: 0;
   // font-style: italic;
   // font-weight: bold;
   border-bottom: 1px solid gray;
-
 }
-
 
 .layer {
   position: relative;
@@ -61,8 +62,10 @@ a, a:link, a:visited {
     min-height: 100vh;
     z-index: 2;
 
-    a, a:link, a:visited {
-    color: var(--c-black);
+    a,
+    a:link,
+    a:visited {
+      color: var(--c-black);
     }
   }
 
@@ -76,12 +79,13 @@ a, a:link, a:visited {
     top: 0;
     width: 100%;
     z-index: 3;
-    a, a:link, a:visited {
-    color: var(--c-white);
+    a,
+    a:link,
+    a:visited {
+      color: var(--c-white);
     }
   }
 }
-
 
 .content {
   min-height: 100vh;
